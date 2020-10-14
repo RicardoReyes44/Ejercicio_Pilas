@@ -1,39 +1,49 @@
 
 public class ImplementacionPilaEstatica implements RentaPeliculas{
 
+	Pelicula p[];
+	int flecha = -1;
+	
+	public ImplementacionPilaEstatica(int tamaño) {p = new Pelicula[tamaño];}
+	
 	@Override
 	public Pelicula eliminar() {
-		// TODO Auto-generated method stub
-		return null;
+		if(verificarPilaVacia()) {
+			flecha--;
+			return p[flecha+1];
+		}else {
+			return null;
+		}
 	}
 
 	@Override
 	public Pelicula obtenerUltimo() {
-		// TODO Auto-generated method stub
-		return null;
+		return p[0];
 	}
 
 	@Override
-	public boolean agregar() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean agregar(Pelicula elemento) {
+		if(!verificarPilaLlena()) {
+			flecha++;
+			p[flecha] = elemento;
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 	@Override
 	public int obtenerTamaño() {
-		// TODO Auto-generated method stub
-		return 0;
+		return flecha+1;
 	}
 	
 	@Override
 	public boolean verificarPilaLlena() {
-		// TODO Auto-generated method stub
-		return false;
+		return p.length-1==flecha;
 	}
 
 	@Override
 	public boolean verificarPilaVacia() {
-		// TODO Auto-generated method stub
-		return false;
+		return -1==flecha;
 	}
 }

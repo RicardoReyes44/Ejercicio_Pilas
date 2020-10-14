@@ -8,20 +8,22 @@ public class ImplementacionPilaDinamica implements RentaPeliculas{
 	
 	@Override
 	public Pelicula eliminar() {
-		// TODO Auto-generated method stub
-		return null;
+		return pila.pop();
 	}
 
 	@Override
 	public Pelicula obtenerUltimo() {
-		// TODO Auto-generated method stub
-		return null;
+		return pila.get(0);
 	}
 
 	@Override
-	public boolean agregar() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean agregar(Pelicula elemento) {
+		if(verificarPilaVacia()) {
+			pila.add(elemento);
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 	@Override
@@ -38,7 +40,6 @@ public class ImplementacionPilaDinamica implements RentaPeliculas{
 
 	@Override
 	public boolean verificarPilaVacia() {
-		// TODO Auto-generated method stub
-		return false;
+		return pila.size()==0;
 	}
 }
