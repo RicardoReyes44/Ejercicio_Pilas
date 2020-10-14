@@ -24,13 +24,15 @@ public class ImplementacionPilaEstatica implements RentaPeliculas{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-	private boolean verificarPilaLlena() {
+	
+	@Override
+	public boolean verificarPilaLlena() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	private boolean verificarPilaVacia() {
+	@Override
+	public boolean verificarPilaVacia() {
 		// TODO Auto-generated method stub
 		return false;
 	}
