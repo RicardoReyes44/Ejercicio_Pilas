@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ImplementacionPilaEstatica implements RentaPeliculas{
 
@@ -8,9 +9,10 @@ public class ImplementacionPilaEstatica implements RentaPeliculas{
 	
 	@Override
 	public Pelicula eliminar() {
-		if(verificarPilaVacia()) {
-			flecha--;
-			return p[flecha+1];
+		if(!verificarPilaVacia()) {
+			Pelicula e = p[flecha];
+			p[flecha--] = null;
+			return e;
 		}else {
 			return null;
 		}
@@ -34,16 +36,28 @@ public class ImplementacionPilaEstatica implements RentaPeliculas{
 
 	@Override
 	public int obtenerTamaño() {
-		return flecha+1;
+		if(flecha!=-1) {
+			return flecha+1;
+		}else {
+			return 0;
+		}
 	}
 	
 	@Override
 	public boolean verificarPilaLlena() {
-		return p.length-1==flecha;
+		return 4==flecha;
 	}
 
 	@Override
 	public boolean verificarPilaVacia() {
-		return -1==flecha;
+		return flecha==-1;
 	}
+
+	@Override
+	public String toString() {
+		return "ImplementacionPilaEstatica [p=" + Arrays.toString(p) + ", flecha=" + flecha + "]";
+	}
+	
+	
+	
 }
