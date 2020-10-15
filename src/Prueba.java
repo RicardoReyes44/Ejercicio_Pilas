@@ -138,7 +138,18 @@ public class Prueba {
 		    }catch(InputMismatchException error) {
 		    	System.out.println("Error en la entrada de datos <" + error + ">\n\n");
 		    }
+			
+			/*
+			 * Quitar para ver pruebas
+			 * 
+			System.out.println(ipd);
+			System.out.println(ipe);
+			System.out.println(Arrays.toString(rentadas));
+			*/
+			
 		}
+		
+		System.out.println("\nPrograma terminado");
 
 	}
 

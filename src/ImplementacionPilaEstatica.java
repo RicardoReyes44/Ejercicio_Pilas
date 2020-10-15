@@ -53,11 +53,10 @@ public class ImplementacionPilaEstatica implements RentaPeliculas{
 		return flecha==-1;
 	}
 
+	/*
 	@Override
 	public String toString() {
 		return "ImplementacionPilaEstatica [p=" + Arrays.toString(p) + ", flecha=" + flecha + "]";
-	}
-	
-	
+	}*/
 	
 }

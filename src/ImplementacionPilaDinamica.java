@@ -44,9 +44,10 @@ public class ImplementacionPilaDinamica implements RentaPeliculas{
 		return pila.size()==0;
 	}
 
+	/*
 	@Override
 	public String toString() {
 		return "ImplementacionPilaDinamica [pila=" + pila + ", punto=" + punto + "]";
-	}
+	}*/
 	
 }
