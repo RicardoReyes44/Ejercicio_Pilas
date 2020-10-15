@@ -137,6 +137,7 @@ public class Prueba {
 			}
 		    }catch(InputMismatchException error) {
 		    	System.out.println("Error en la entrada de datos <" + error + ">\n\n");
+		    	entrada.nextLine();
 		    }
 			
 			/*
