@@ -140,8 +140,6 @@ public class Prueba {
 		    }
 			
 			/*
-			 * Quitar para ver pruebas
-			 * 
 			System.out.println(ipd);
 			System.out.println(ipe);
 			System.out.println(Arrays.toString(rentadas));
